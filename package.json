@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:acodeninja/BattleSinks-React-App-and-API.git",
   "author": "Lawrence <lawrence.goldstien@madetech.com>",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
