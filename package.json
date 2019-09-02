@@ -6,7 +6,8 @@
   "author": "Lawrence <lawrence.goldstien@madetech.com>",
   "license": "MPL-2.0",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build:frontend": "cd frontend && yarn build"
   },
   "dependencies": {
     "express": "^4.17.1"
