@@ -1,0 +1,8 @@
+{
+  "name": "BattleSinks-React-App-and-API",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:acodeninja/BattleSinks-React-App-and-API.git",
+  "author": "Lawrence <lawrence.goldstien@madetech.com>",
+  "license": "MPL-2.0"
+}
