@@ -5,6 +5,9 @@
   "repository": "git@github.com:acodeninja/BattleSinks-React-App-and-API.git",
   "author": "Lawrence <lawrence.goldstien@madetech.com>",
   "license": "MPL-2.0",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
