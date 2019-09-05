@@ -1,0 +1,5 @@
+const GameGateway = require("../gateway/game_gateway");
+
+module.exports = async (game_id) => {
+    return await GameGateway.destroy(game_id);
+};
