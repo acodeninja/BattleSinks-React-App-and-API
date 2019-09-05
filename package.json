@@ -1,5 +1,5 @@
 {
-  "name": "BattleSinks-React-App-and-API",
+  "name": "battlesinks-react-app-and-api",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:acodeninja/BattleSinks-React-App-and-API.git",
@@ -7,9 +7,30 @@
   "license": "MPL-2.0",
   "scripts": {
     "start": "node server.js",
+    "test": "jest --watchAll",
+    "dev": "yarn dev:backend & yarn dev:frontend",
+    "dev:backend": "nodemon server",
+    "dev:frontend": "cd frontend && yarn start",
     "build:frontend": "cd frontend && yarn build"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "frontend/",
+      "node_modules/"
+    ]
+  },
+  "nodemonConfig": {
+    "ignore": ["frontend/*"]
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-winston": "^3.3.0",
+    "sequelize": "^5.18.0",
+    "short-uuid": "^3.1.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2",
+    "sqlite3": "^4.1.0"
   }
 }
