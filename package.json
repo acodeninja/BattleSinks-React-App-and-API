@@ -20,11 +20,14 @@
     ]
   },
   "nodemonConfig": {
-    "ignore": ["frontend/*"]
+    "ignore": [
+      "frontend/*"
+    ]
   },
   "dependencies": {
     "express": "^4.17.1",
     "express-winston": "^3.3.0",
+    "pg": "^7.12.1",
     "sequelize": "^5.18.0",
     "short-uuid": "^3.1.1",
     "winston": "^3.2.1"
