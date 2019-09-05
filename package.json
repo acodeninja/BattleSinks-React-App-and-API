@@ -12,7 +12,8 @@
     "dev:backend": "nodemon server",
     "dev:frontend": "cd frontend && yarn start",
     "build": "yarn build:frontend",
-    "build:frontend": "cd frontend && yarn build"
+    "build:frontend": "cd frontend && yarn build",
+    "postinstall": "cd frontend && yarn install"
   },
   "jest": {
     "testPathIgnorePatterns": [
