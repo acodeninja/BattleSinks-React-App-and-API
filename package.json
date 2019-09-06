@@ -7,7 +7,8 @@
   "license": "MPL-2.0",
   "scripts": {
     "start": "node server.js",
-    "test": "jest --watchAll",
+    "test:backend": "jest --watchAll",
+    "test:frontend": "cd ./frontend && yarn test",
     "dev": "yarn dev:backend & yarn dev:frontend",
     "dev:backend": "nodemon server",
     "dev:frontend": "cd frontend && yarn start",
