@@ -41,8 +41,6 @@ module.exports = async (grid_size=16) => {
                     }
                 }
 
-                console.log(proposedCells);
-
                 let tryAgain = false;
 
                 let firstProposedCell = proposedCells[0];
