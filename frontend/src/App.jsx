@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Games from "./pages/Games";
 import Game from "./pages/Game";
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
     render() {
