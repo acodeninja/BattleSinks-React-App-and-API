@@ -6,6 +6,8 @@ import Navigation from "../components/Navigation";
 
 import './Game.css';
 
+import './Games.scss';
+
 class Game extends Component {
     constructor(props) {
         super(props);
