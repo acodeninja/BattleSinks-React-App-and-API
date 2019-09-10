@@ -1,0 +1,5 @@
+/*
+ * The Width of the game board
+ * We use vh here because we don't want the game board to go off the screen on really wide monitors
+ */
+$game-grid-width: 75vh;

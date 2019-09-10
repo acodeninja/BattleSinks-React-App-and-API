@@ -1,0 +1,31 @@
+@import "../variables";
+
+.GameBoard {
+  margin: 0 auto;
+  width: $game-grid-width;
+
+  .GameGrid {
+    display: grid;
+    grid-template-columns: repeat(16, auto);
+
+    .cell {
+      color: black;
+      text-align: center;
+      line-height: calc(#{$game-grid-width} / 16);
+      width: calc(#{$game-grid-width} / 16);
+      height: calc(#{$game-grid-width} / 16);
+      cursor: pointer;
+      font-weight: bold;
+      background-color: aqua;
+
+      &.bombed {
+        color: white;
+        background-color: red;
+
+        &.ship {
+          background-color: blueviolet;
+        }
+      }
+    }
+  }
+}

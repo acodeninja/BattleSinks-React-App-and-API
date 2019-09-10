@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 
-import {bombCell, getGame, getGameCells} from '../api';
-
+import GameBoard from "../components/GameBoard";
 import Navigation from "../components/Navigation";
 
-import './Game.css';
+import {bombCell, getGame, getGameCells} from '../api';
 
 import './Games.scss';
 
@@ -64,27 +63,13 @@ class Game extends Component {
                 <header>
                     <Navigation/>
                 </header>
-                <h1>This game is {game.complete ? 'finished' : 'ongoing'}</h1>
                 <main>
-                    <div>
-                        <div className="GameGrid">
-                            {cells.map(cell => (
-                                <div
-                                    key={`cell-${cell.id}`}
-                                    style={{
-                                        backgroundColor: cell.ship ? 'green' : (cell.bomb ? 'red' : 'blue'),
-                                    }}
-                                    onClick={this.bombCell(cell.id)}
-                                >
-                                    {cell.id}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    <h1>This game is {game.complete ? 'finished' : 'ongoing'}</h1>
+                    <GameBoard bombCell={this.bombCell} cells={cells}/>
                 </main>
                 <footer>
-                    <h2>Make PATCH requests to {window.location.origin}/api/game/{game.id}/cell/&lt;cell id&gt;</h2>
-                    <h3>with body {`{"bomb": true}`}</h3>
+                    <h2>PATCH {window.location.origin}/api/game/{game.id}/cell/&lt;cell id&gt;</h2>
+                    <h3>{`{"bomb": true}`}</h3>
                 </footer>
             </>
         );
