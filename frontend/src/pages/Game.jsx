@@ -33,7 +33,7 @@ class Game extends Component {
     }
 
     getGame() {
-        const {id} = this.props.match.params;
+        const [id] = window.location.pathname.split('/').slice(2);
 
         getGame(id)
             .then(gameResponse => {

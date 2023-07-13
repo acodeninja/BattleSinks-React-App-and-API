@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
+import {Link, redirect} from "react-router-dom";
 
 import {getGames, newGame} from '../api';
 
@@ -34,37 +34,36 @@ class Games extends Component {
     }
 
     newGame() {
-        const {history} = this.props;
-
         newGame()
             .then(response => {
                 const {id} = response.data;
-
-                history.push(`/game/${id}`);
+                window.location.replace(`${window.location.origin}/game/${id}`);
             })
     }
 
     render() {
         const {games} = this.state;
+
         return (
             <>
                 <header>
-                    <Navigation />
+                    <Navigation/>
                 </header>
                 <main>
-                    <button type="button" onClick={this.newGame}>
-                        New Game
-                    </button>
                     <table>
                         <thead>
                         <tr>
                             <th>Game</th>
+                            <th>Link</th>
                             <th>Completed?</th>
                         </tr>
                         </thead>
                         <tbody>
                         {games.map(game => (
                             <tr key={`games-${game.id}`}>
+                                <td>
+                                    {game.id}
+                                </td>
                                 <td>
                                     <Link to={`/game/${game.id}`}>
                                         Play
@@ -77,6 +76,10 @@ class Games extends Component {
                         ))}
                         </tbody>
                     </table>
+
+                    <button type="button" onClick={this.newGame}>
+                        New Game
+                    </button>
                 </main>
             </>
         );
